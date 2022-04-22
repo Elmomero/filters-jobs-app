@@ -52,7 +52,9 @@ body {
   background-color: var(--Light-Grayish-Cyan-A);
   margin-right: 7px;
   margin-bottom: 7px;
+  cursor: pointer;
 }
+
 .filter-text{
   text-align: center;
   color: var(--Desaturated-Dark-Cyan);
@@ -68,12 +70,17 @@ body {
   border-radius: 0 5px 5px 0;
   background-color: var(--Desaturated-Dark-Cyan);
 }
+.filter-image:hover{
+  background-color: var(--Very-Dark-Grayish-Cyan);
+}
 .clear-filters-button{
   width: 20%;
   border: none;
   background-color: transparent;
   color: var(--Desaturated-Dark-Cyan);
   font-weight: 600;
+  cursor: pointer;
+  
 }
 .clear-filters-button:hover{
   text-decoration: underline;
@@ -84,20 +91,20 @@ body {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 35px;
 
 }
 .job-card{
-  
-  /* height: 200px; */
-  
-  border-left: 5px solid var(--Desaturated-Dark-Cyan);
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
   box-shadow: 3px 3px 3px 3px rgb(231, 240, 247);
+}
+.border-card{
+  border-left: 6px solid var(--Desaturated-Dark-Cyan);
 }
 .job-info{
   margin-top: -25px;
@@ -115,7 +122,7 @@ body {
 }
 .job-data p{
   margin-right: 30px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .company-name{
   color: var(--Desaturated-Dark-Cyan);
@@ -124,10 +131,10 @@ body {
 .tag{
   text-transform: uppercase;
   background-color: var(--Desaturated-Dark-Cyan);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--Light-Grayish-Cyan-A);
-  padding: 5px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 13px;
 }
 .featured{
   background-color: var(--Very-Dark-Grayish-Cyan);
@@ -137,7 +144,11 @@ body {
   font-size: 1.5rem;
   color: var(--Very-Dark-Grayish-Cyan);  
   font-weight: 600;
+  cursor: pointer;
 }
+.position-text:hover{
+  color: var(--Desaturated-Dark-Cyan);
+} 
 .job-specifications{
   display: flex;
 }
@@ -174,4 +185,8 @@ body {
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
+}
+.job-tags:hover{
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: var(--Light-Grayish-Cyan-A);
 }

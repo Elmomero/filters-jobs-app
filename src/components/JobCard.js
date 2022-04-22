@@ -36,7 +36,19 @@ export const JobCard = ({ job }) => {
           {isNew && <p className="tag">new!</p>}
           {featured && <p className={`tag featured`}>featured</p>}
         </div>
-        <h3 className="position-text">{position}</h3>
+        <h3
+          className="position-text"
+          onClick={(e) => {
+            const cards = document.querySelectorAll(".job-card");
+            cards.forEach((card) => {
+              card.classList.remove("border-card");
+            });
+            const parentContainer = e.target.parentNode.parentNode;
+            parentContainer.classList.add("border-card");
+          }}
+        >
+          {position}
+        </h3>
         <div className="job-specifications">
           <p className="job-specification">{postedAt}</p>
           <p className="job-specification">{contract}</p>
