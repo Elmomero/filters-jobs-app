@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleTag } from "../reducers/tagSlice";
 export const JobCard = ({ job }) => {
   const {
@@ -17,10 +17,16 @@ export const JobCard = ({ job }) => {
     tools,
   } = job;
   // const selectedTags = useSelector((store)=> store.tags)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const tags = [role, level, ...languages, ...tools];
-  
+
+  const objectTags = tags.map((tag, i) => {
+    if (i === 0) return { type: "role", tag };
+    else if (i === 1) return { type: "level", tag };
+    else return { type: "tools-languages", tag };
+  });
+
   return (
     <div className="job-card">
       <img className="company-logo" src={logo} alt="enterprice logo" />
@@ -29,7 +35,6 @@ export const JobCard = ({ job }) => {
           <p className="company-name">{company}</p>
           {isNew && <p className="tag">new!</p>}
           {featured && <p className={`tag featured`}>featured</p>}
-          
         </div>
         <h3 className="position-text">{position}</h3>
         <div className="job-specifications">
@@ -39,9 +44,15 @@ export const JobCard = ({ job }) => {
         </div>
       </article>
       <section className="job-requirenments">
-        {tags.map((tag) => (
-          <div className='job-tags' key={tag} role="button"
-          onClick={()=> dispatch(toggleTag(tag))}>{tag}</div>
+        {objectTags.map((objectTag) => (
+          <div
+            className="job-tags"
+            key={objectTag.tag}
+            role="button"
+            onClick={() => dispatch(toggleTag(objectTag))}
+          >
+            {objectTag.tag}
+          </div>
         ))}
       </section>
     </div>

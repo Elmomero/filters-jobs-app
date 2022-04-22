@@ -4,7 +4,7 @@ import { JobsFilter } from "./components/JobsFilter";
 import jobs from "./data/data.json";
 import { clearTag } from "./reducers/tagSlice";
 function App() {
-  const filters = useSelector((store)=> store.tags)
+  const objectTags = useSelector((store)=> store.tags)
   // const filters = ["Frontend", "CSS", "Javascript", "React"];
   const dispatch = useDispatch()
 
@@ -13,8 +13,8 @@ function App() {
       <div className="header-background"></div>
       <article className="jobs-section">
         <section className="jobs-filters">
-          {filters.map((filter) => (
-            <JobsFilter key={filter} filter={filter} />
+          {objectTags.map(({tag}) => (
+            <JobsFilter key={tag} tag={tag} />
           ))}
         </section>
         <button className="clear-filters-button" 
