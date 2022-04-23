@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/filters-jobs-app/static/css/main.8e3e1c18.css",
+    "main.js": "/filters-jobs-app/static/js/main.a970afe8.js",
+    "static/media/bg-header-desktop.svg": "/filters-jobs-app/static/media/bg-header-desktop.8694f4668c94cdc9d16e.svg",
+    "index.html": "/filters-jobs-app/index.html",
+    "static/media/icon-remove.svg": "/filters-jobs-app/static/media/icon-remove.70c075ce001e5ccae7c6.svg",
+    "main.8e3e1c18.css.map": "/filters-jobs-app/static/css/main.8e3e1c18.css.map",
+    "main.a970afe8.js.map": "/filters-jobs-app/static/js/main.a970afe8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e3e1c18.css",
+    "static/js/main.a970afe8.js"
+  ]
+}
