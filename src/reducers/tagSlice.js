@@ -24,7 +24,7 @@ export const tagSlice = createSlice({
       } else if (existType) {
         state = state.filter(({ type }) => type !== payload.type);
         state.push({ type: payload.type, tag: payload.tag });
-      }
+      } 
 
       return state;
     },

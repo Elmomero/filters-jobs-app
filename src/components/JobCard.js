@@ -28,34 +28,37 @@ export const JobCard = ({ job }) => {
   });
 
   return (
-    <div className="job-card">
-      <img className="company-logo" src={logo} alt="enterprice logo" />
-      <article className="job-info">
-        <div className="job-data">
-          <p className="company-name">{company}</p>
-          {isNew && <p className="tag">new!</p>}
-          {featured && <p className={`tag featured`}>featured</p>}
-        </div>
-        <h3
-          className="position-text"
-          onClick={(e) => {
-            const cards = document.querySelectorAll(".job-card");
-            cards.forEach((card) => {
-              card.classList.remove("border-card");
-            });
-            const parentContainer = e.target.parentNode.parentNode;
-            parentContainer.classList.add("border-card");
-          }}
-        >
-          {position}
-        </h3>
-        <div className="job-specifications">
-          <p className="job-specification">{postedAt}</p>
-          <p className="job-specification">{contract}</p>
-          <p className="job-specification">{location}</p>
-        </div>
-      </article>
-      <section className="job-requirenments">
+    <section className="job-card">
+      <div className="job-car-left">
+        <img className="company-logo" src={logo} alt="enterprice logo" />
+        <article className="job-info">
+          <div className="job-data">
+            <p className="company-name">{company}</p>
+            {isNew && <p className="tag">new!</p>}
+            {featured && <p className={`tag featured`}>featured</p>}
+          </div>
+          <h3
+            className="position-text"
+            onClick={(e) => {
+              const cards = document.querySelectorAll(".job-card");
+              cards.forEach((card) => {
+                card.classList.remove("border-card");
+              });
+              const parentContainer = e.target.parentNode.parentNode.parentNode;
+              parentContainer.classList.add("border-card");
+            }}
+          >
+            {position}
+          </h3>
+          <div className="job-specifications">
+            <p className="job-specification">{postedAt}</p>
+            <p className="job-specification">{contract}</p>
+            <p className="job-specification">{location}</p>
+          </div>
+        </article>
+      </div>
+
+      <article className="job-requirenments">
         {objectTags.map((objectTag) => (
           <div
             className="job-tags"
@@ -66,7 +69,7 @@ export const JobCard = ({ job }) => {
             {objectTag.tag}
           </div>
         ))}
-      </section>
-    </div>
+      </article>
+    </section>
   );
 };
