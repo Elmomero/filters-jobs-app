@@ -30,8 +30,7 @@ Users should be able to:
 
 ### How to use
 
-To add a filter you only have to click in any tag in any job in the list,
-the tags are
+To add a filter you only have to click in any tag in any job in the list
 
 ![addFilter](./public/images/job-tag-image.png)
 
