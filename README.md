@@ -30,13 +30,14 @@ Users should be able to:
 
 ### How to use
 
-To add a filter you only have to click in any tag in any job in the list
+To add or remove a filter you have to click in any tag in any job in the list
 
 ![addFilter](./public/images/job-tag-image.png)
 
-After that a menu with all the tags you selected will be displayed,
-you can add and remove individually a tag , and automatically the filters 
-will be applied, also you can remove all tags with the clear button 
+After that a list with all the tags you selected will be displayed,the filters 
+will be applied automatically, also you can remove all tags with the clear button 
+
+![filerslist](./public/images/filterslist.png)
 
 
 
